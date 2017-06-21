@@ -1,10 +1,10 @@
 
 
-import urllib.request, json, csv
+import urllib, json
 
 def read_jsonURL(jsonURL):
-	with urllib.request.urlopen(jsonURL) as url:
-		data = json.loads(url.read().decode())
+	url_response = urllib.urlopen(jsonURL)
+	data = json.loads(url_response.read())
 	return data
 
 rhyme_url = "https://api.datamuse.com/words?rel_rhy="
