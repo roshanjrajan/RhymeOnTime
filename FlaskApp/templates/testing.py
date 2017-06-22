@@ -3,24 +3,19 @@
 
 <head>
   <title>This is a test</title>
+
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body>
-  {% if word %}
-    <h1> Word is: {{word}} </h1>
+  <title>This is a test</title>
+  {% if name %}
+    <h1>Hello {{name}}!</h1>
   {% else %}
-  <h1> No word entered {{word}}</h1>
-
-  <form action="/testing" method="POST">
-    <input type="text" name="text">
-    <input type="submit" name="my-form" value="Send">
-  </form>
-
   <button onclick="window.location.href='/'" type="button"
   class="btn btn-lg btn-primary">Home</button>
-  {% endif %}
+  {%endif%}
 </body>
 
 
