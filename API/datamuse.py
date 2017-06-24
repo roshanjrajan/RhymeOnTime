@@ -1,6 +1,6 @@
 
 
-import urllib, json, random
+import urllib, json, random, os
 
 def read_jsonURL(jsonURL):
 	url_response = urllib.urlopen(jsonURL)
@@ -22,7 +22,7 @@ def find_rhymes(word):
 
 
 def get_word():
-	word_file = "/usr/share/dict/words"
+	word_file = os.getcwd() + "/../words"
 	word_list = open(word_file).read().splitlines()
 	return random.choice(word_list)
 
@@ -41,6 +41,4 @@ def find_rhymable_word():
 curr_word, curr_rhymes_dict = find_rhymable_word()
 print(curr_word)
 print(curr_rhymes_dict)
-
-
 
